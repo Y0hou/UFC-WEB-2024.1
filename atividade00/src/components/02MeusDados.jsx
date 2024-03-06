@@ -1,11 +1,11 @@
-const MeusDados2 = (props) => {
-    const { nome, curso, universidade} = props;
+const MeusDados2 = ({nome, curso, universidade}) => {
+    //const { nome, curso, universidade} = props;
   
     return (
       <div>
-        <h3>Nome: {nome}</h3>
-        <h3>Curso: {curso}</h3>
-        <h3>Universidade: {universidade}</h3>
+        <h1>Nome: {nome}</h1>
+        <h1>Curso: {curso}</h1>
+        <h1>Universidade: {universidade}</h1>
       </div>
     );
   };
