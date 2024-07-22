@@ -1,7 +1,7 @@
-import SistemaSolar from "./components/04Childrens/SistemaSolar";
-import Planeta from "./components/04Childrens/Planeta";
-import Galaxia from "./components/04Childrens/Galaxia";
-
+//import SistemaSolar from "./components/04Childrens/SistemaSolar";
+//import Planeta from "./components/04Childrens/Planeta";
+//import Galaxia from "./components/04Childrens/Galaxia";
+import MyNavBar from "./components/16Bootstrap/MyNavbar";
 
 
 // const App = () => {
@@ -20,9 +20,7 @@ import Galaxia from "./components/04Childrens/Galaxia";
 const App = () => {
     return (
         <>
-            <h1>Desenvolvimento Web</h1>
-            <hr/>
-            <h1>{Galaxia}</h1>
+            <MyNavBar />
         </>
     )
 }
