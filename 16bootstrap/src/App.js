@@ -1,11 +1,9 @@
-import MyNavBar from "./components/MyNavbar";
+import Main from "./components/Main";
 
-const App = () => {
-    return (
-        <>
-            <MyNavBar />
-        </>
-    )
+function App() {
+  return (
+    <Main />
+  )
 }
 
 export default App;
