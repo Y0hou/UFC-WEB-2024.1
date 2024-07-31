@@ -7,6 +7,22 @@ const Criar = () => {
     const [nome, setNome] = useState("")
     const [curso, setCurso] = useState("")
     const [titulacao, setTitulacao] = useState("")
+    const [ai, setAi] = useState({"es":false, "si":false, "lc":false, "mc":false})
+    const handleInputNome = (event) => {
+        setNome(event.target.value)
+    }
+
+    const handleCheckboxAi = (event) => {
+        setAi(
+            {
+                es:event.target.checked
+            }
+        )
+    }
+
+    const handleInputCurso = (event) => {
+        setCurso(event.target.value)
+    }
 
     const handleSubmit = (event) => {
         event.preventDefault()
@@ -16,6 +32,7 @@ const Criar = () => {
     return (
         <div>
             <h1>Criar Professor</h1>
+            <h4>JSON</h4>
             <form className="form-content" onSubmit={handleSubmit}>
 
                 <div className="mb-3">
@@ -25,7 +42,7 @@ const Criar = () => {
                         type="text"
                         name="nome" 
                         id="inputNome"
-                        onChange={(event)=>setNome(event.target.value)}
+                        onChange={handleInputNome}
                     />
                 </div>
                 
@@ -36,7 +53,7 @@ const Criar = () => {
                         type="text"
                         name="curso"
                         id="inputCurso"
-                        onChange={(event)=>setCurso(event.target.value)} 
+                        onChange={handleInputCurso} 
                     />
                 </div>
 
@@ -53,6 +70,23 @@ const Criar = () => {
                     </select>
                 </div>
                 
+                <div>
+                    <div className = "form-check">
+                        <input
+                            id = "idEs"
+                            type = "checkbox"
+                            className = "form-check-input"
+                            checked = {ai.es}
+                            onChange={handleCheckbox}
+                            
+                        />
+                        <label
+                            htmlFor = "idEs"
+                            className = "form-check-label"
+                        > Engenharia de Software</label>
+                    </div>
+                </div>
+
                 <div className="div-button-submit">
                     <button
                         type="submit"
